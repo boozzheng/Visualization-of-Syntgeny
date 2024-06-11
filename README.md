@@ -3,7 +3,7 @@ This code is for visualization of [Syntgeny](https://github.com/BIONF/Syntgeny/t
 
 # Before use
 Before using it, we need to have two files, `nodes.dmp` and `names.dmp`, which are used to recover the full name of the species.
-These files can be downloaded from NCBI, just click [here](https://ftp.ncbi.nih.gov/pub/taxonomy/) to get the zip file `taxdump.tar.gz` and put the two files we need into the same folder as the code file.
+They can be downloaded from NCBI, just click [here](https://ftp.ncbi.nih.gov/pub/taxonomy/) to get the zip file `taxdump.tar.gz` and put the two files we need into the same folder as the code file.
 
 Additionally, the packages we need are listed in `requirements.txt`, they can be installed using the following command.  
 ps. Maybe you already have `kaleido`, but with the most recent version you may not be able to run the code successfully, it is recommended to use an older version.
