@@ -18,5 +18,11 @@ The default format is html, when you don't enter any format.
 
 Example command
 ```
-python syntgeny_v.py test.syntgeny.tsv jpg
+python syntgeny_v.py test.syntgeny.tsv png
 ```
+
+# Example Output
+You can try it, use the example command for the provided tsv file, and you will see the following picture.
+![demo](/test.syntgeny.png)
+
+
