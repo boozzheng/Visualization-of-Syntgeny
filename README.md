@@ -26,7 +26,7 @@ You can try it, use the example command for the provided tsv file, and you will 
 
 Species and contigs are shown on the left, the red lines at the beginning and end represent the boundaries of the contigs, and each distance is represented by the number of genes and shown in the box.   
 
-Each colored-filled arrow represents a gene, homologous genes share the same color, and the direction of the arrow represents the orientation of the gene, i.e. an arrow to the right means that the gene is located in the positive strand, and an arrow to the left means the negative strand.
+Each colored-filled arrow represents a gene, orthologous genes share the same color, and the direction of the arrow represents the orientation of the gene, i.e. an arrow to the right means that the gene is located in the positive strand, and an arrow to the left means the negative strand.
 ![demo](/test.syntgeny.png)
 
 
