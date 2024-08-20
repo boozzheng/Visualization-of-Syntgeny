@@ -24,9 +24,9 @@ python syntgeny_v.py test.syntgeny.tsv png
 # Example Output
 You can try it, use the example command for the provided tsv file, and you will see the following picture.  
 
-Species and contigs are shown on the left, the red lines at the beginning and end represent the boundaries of the contigs, and each distance is represented by the number of genes and shown in the box.   
+Species and contigs are shown on the left, the red lines at the beginning and end represent the boundaries of the contigs, and each distance is displayed by the number of genes and shown in the box.   
 
 Each colored-filled arrow represents a gene, orthologous genes share the same color, and the direction of the arrow represents the orientation of the gene, i.e. an arrow to the right means that the gene is located in the positive strand, and an arrow to the left means the negative strand.
-![demo](/test.syntgeny.png)
+![demo]
 
 
