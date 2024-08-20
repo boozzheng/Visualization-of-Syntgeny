@@ -81,8 +81,6 @@ def data_to_diagram(df,tsv_file,file_format):
             elif dir == '-':
                 dir = ('+','r')
             reverse_gene[4]=dir
-
-            reverse_gene.append('r')
             
             r_contig.append(reverse_gene)
         return r_contig
