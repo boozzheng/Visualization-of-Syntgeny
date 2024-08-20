@@ -12,7 +12,6 @@ import plotly.graph_objects as go
 import pandas as pd
 import plotly.express as px
 import colorsys
-import colorsys
 import webbrowser
 import argparse
 import os
@@ -78,10 +77,12 @@ def data_to_diagram(df,tsv_file,file_format):
 
             dir = reverse_gene[4]
             if dir == '+':
-                dir = '-'
+                dir = ('-','r')
             elif dir == '-':
-                dir = '+'
+                dir = ('+','r')
             reverse_gene[4]=dir
+
+            reverse_gene.append('r')
             
             r_contig.append(reverse_gene)
         return r_contig
@@ -171,11 +172,18 @@ def data_to_diagram(df,tsv_file,file_format):
                         sublist[i-gap_count]=('inter', gap_count)
                         gap_count = 0
            
-            contig_front = int(sublist[first_non_gap_index][7] - 1)
-            sublist.insert(0, ('contig_front', contig_front))
-
-            contig_back = int(sublist[last_non_gap_index+1][6] - sublist[last_non_gap_index+1][7])
-            sublist.append(('contig_back', contig_back))
+            if len(sublist[first_non_gap_index][4]) == 1:
+                contig_front = int(sublist[first_non_gap_index][7] - 1)
+                sublist.insert(0, ('contig_front', contig_front))
+                contig_back = int(sublist[last_non_gap_index+1][6] - sublist[last_non_gap_index+1][7])
+                sublist.append(('contig_back', contig_back))
+            
+            elif len(sublist[first_non_gap_index][4]) == 2:
+            
+                contig_front = int(sublist[first_non_gap_index][6] - sublist[first_non_gap_index][7])
+                sublist.insert(0, ('contig_front', contig_front))
+                contig_back = int(sublist[last_non_gap_index+1][7] - 1)
+                sublist.append(('contig_back', contig_back))
 
             gap_count = 0
             for item in sublist[1:]:
@@ -421,7 +429,7 @@ def parse_arguments():
     if args.file_format not in ['html', 'png', 'jpg', 'jpeg', 'webp', 'svg','pdf']:
         print("Error：format must be 'html', 'png', 'jpg', 'jpeg', 'webp', 'svg','pdf'.")
         exit()
-    
+
 
     return args
 
