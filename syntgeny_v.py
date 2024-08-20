@@ -359,7 +359,7 @@ def data_to_diagram(df,tsv_file,file_format):
 
                 ratio = 0.8
 
-                if gene[4] == '+':
+                if gene[4][0] == '+':
                     arrow_path = f"M {col*bar_len} {row+0.4} L {(col+ratio)*bar_len} {row+0.4} L {(col+1)*bar_len} {row} L {(col+ratio)*bar_len} {row-0.4} L {col*bar_len} {row-0.4} Z"
                 else:
                     arrow_path = f"M {(col+1-ratio)*bar_len} {row+0.4} L {(col+1)*bar_len} {row+0.4} L {(col+1)*bar_len} {row-0.4} L {(col+1-ratio)*bar_len} {row-0.4} L {col*bar_len} {row} Z"
